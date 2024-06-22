@@ -2,7 +2,7 @@
 
 MacOS Sequoia EFI for OpenCore based on z690 motherboard, i5 12400f CPU and 6700 XT GPU.
 
-![](img/preview.png)
+![](img/Preview.png)
 
 ---
 
