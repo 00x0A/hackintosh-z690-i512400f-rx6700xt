@@ -38,11 +38,11 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-PLUG-DRTNIA.aml</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>SSDT-PLUG-DRTNIA.aml</string>
+                    <string>ssdt_data.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -59,22 +59,6 @@
                     <true/>
                     <key>Path</key>
                     <string>SSDT-RHUB.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-RTCAWAC.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-RTCAWAC.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-USB-Reset.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-USB-Reset.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -83,14 +67,6 @@
                     <true/>
                     <key>Path</key>
                     <string>SSDT-USBX.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-EC.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -152,8 +128,6 @@
                 <key>EnableSafeModeSlide</key>
                 <true/>
                 <key>EnableWriteUnprotector</key>
-                <false/>
-                <key>FixupAppleEfiImages</key>
                 <false/>
                 <key>ForceBooterSignature</key>
                 <false/>
@@ -243,6 +217,24 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
+                    <string>RestrictEvents.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.4</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RestrictEvents</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
                     <string>SMCSuperIO.kext</string>
                     <key>Comment</key>
                     <string>V1.3.3 | SMCSuperIO.kext</string>
@@ -297,13 +289,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>RestrictEvents.kext</string>
+                    <string>SMCRadeonSensors.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.4</string>
+                    <string>V2.1.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/RestrictEvents</string>
+                    <string>Contents/MacOS/SMCRadeonSensors</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -317,7 +309,7 @@
                     <key>BundlePath</key>
                     <string>AirportItlwm.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0</string>
+                    <string>V2.3.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -373,7 +365,7 @@
                     <key>Comment</key>
                     <string>V2.4.0</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IntelBTPatcher</string>
                     <key>MaxKernel</key>
@@ -391,7 +383,7 @@
                     <key>Comment</key>
                     <string>V2.4.0 | IntelBluetoothFirmware.kext</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IntelBluetoothFirmware</string>
                     <key>MaxKernel</key>
@@ -409,7 +401,7 @@
                     <key>Comment</key>
                     <string>V2.6.8</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/BlueToolFixup</string>
                     <key>MaxKernel</key>
@@ -558,8 +550,6 @@
                 <true/>
                 <key>DisableIoMapper</key>
                 <true/>
-                <key>DisableIoMapperMapping</key>
-                <false/>
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
@@ -612,13 +602,11 @@
                 <key>ConsoleAttributes</key>
                 <integer>0</integer>
                 <key>HibernateMode</key>
-                <string>None</string>
+                <string>Auto</string>
                 <key>HibernateSkipsPicker</key>
                 <false/>
                 <key>HideAuxiliary</key>
-                <false/>
-                <key>InstanceIdentifier</key>
-                <string></string>
+                <true/>
                 <key>LauncherOption</key>
                 <string>Full</string>
                 <key>LauncherPath</key>
@@ -793,7 +781,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>e1000=0 watchdog=0 -revbeta revblock=pci agdpmod=pikera -wegnoigpu</string>
+                    <string>e1000=0 watchdog=0 -revbeta revblock=pci -wegnoigpu</string>
                     <key>run-efi-updater</key>
                     <string>No</string>
                 </dict>
@@ -860,23 +848,23 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>F5K121101QXK3F7JC</string>
+                <string>C021327004NJG361F</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>VE6QAzw5</data>
+                <data>B6Dwqb9m</data>
                 <key>SpoofVendor</key>
                 <true/>
                 <key>SystemMemoryStatus</key>
                 <string>Auto</string>
                 <key>SystemProductName</key>
-                <string>MacPro7,1</string>
+                <string>iMacPro1,1</string>
                 <key>SystemSerialNumber</key>
-                <string>F5KFR6ZYP7QM</string>
+                <string>C02G6SZ2HX87</string>
                 <key>SystemUUID</key>
-                <string>BDC55CB4-05C8-4BBB-AE24-A675567D7D7F</string>
+                <string>A5E0153F-E459-44EA-B2F5-73660B87DCC1</string>
             </dict>
             <key>Memory</key>
             <dict>
@@ -900,7 +888,7 @@
                         <key>Size</key>
                         <integer>16384</integer>
                         <key>Speed</key>
-                        <integer>3400</integer>
+                        <integer>3500</integer>
                     </dict>
                     <dict>
                         <key>AssetTag</key>
@@ -918,7 +906,7 @@
                         <key>Size</key>
                         <integer>16384</integer>
                         <key>Speed</key>
-                        <integer>3400</integer>
+                        <integer>3500</integer>
                     </dict>
                 </array>
                 <key>ErrorCorrection</key>
@@ -1104,22 +1092,16 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
-                <key>ConsoleFont</key>
-                <string></string>
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
                 <false/>
                 <key>ForceResolution</key>
                 <false/>
-                <key>GopBurstMode</key>
-                <false/>
                 <key>GopPassThrough</key>
                 <string>Disabled</string>
                 <key>IgnoreTextInGraphics</key>
                 <false/>
-                <key>InitialMode</key>
-                <string>Auto</string>
                 <key>ProvideConsoleGop</key>
                 <true/>
                 <key>ReconnectGraphicsOnConnect</key>
@@ -1175,8 +1157,6 @@
                 <false/>
                 <key>OSInfo</key>
                 <false/>
-                <key>PciIo</key>
-                <false/>
                 <key>UnicodeCollation</key>
                 <false/>
             </dict>
@@ -1206,10 +1186,6 @@
                 <true/>
                 <key>ResizeGpuBars</key>
                 <integer>0</integer>
-                <key>ResizeUsePciRbIo</key>
-                <false/>
-                <key>ShimRetainProtocol</key>
-                <false/>
                 <key>TscSyncTimeout</key>
                 <integer>0</integer>
                 <key>UnblockFsConnect</key>
