@@ -1,6 +1,6 @@
 # hackintosh-z690-i512400f-rx6700xt
 
-Install macOS Sonoma on Intel Z690 motherboard with Intel i5-1200F & RX 6700 XT.
+MacOS Sequoia EFI for OpenCore based on z690 motherboard, i5 12400f CPU and 6700 XT GPU.
 
 ![](img/preview.png)
 
