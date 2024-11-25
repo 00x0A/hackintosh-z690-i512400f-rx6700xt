@@ -4,7 +4,7 @@
 
 **SMBIOS**: iMacPro1,1 (MacPro7,1 works alebit less performant)
 
-**OpenCore**: 1.0.2 MOD (Thanks to [Rursache](https://github.com/rursache))
+**OpenCore**: 1.0.2 (Latest as of now)
 
 > [!WARNING]
 > You do this on your own risk, I will not be responsible for what happens to your machine if you don't follow proper instructions (i.e getting banned because you don't change SMBIOS info). Troubleshooting can be done if you supply proper information and ways to reproduce the issues and submit it as an issue on this repo.
