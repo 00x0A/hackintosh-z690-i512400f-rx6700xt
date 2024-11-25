@@ -16,12 +16,12 @@
 
 ## Get it running
 
-1. Download BIOS version 7D25v1H (Latest works but will make your PC loud)
-2. Disable CfgLock, Secure Boot, VT-D in BIOS
-3. Create your recovery using OpenCorePkg
+1. Download BIOS version 7D25v1H (Latest works but will make your PC loud).
+2. Disable CfgLock, Secure Boot, VT-D in BIOS (Enable XMP and your OC/BIOS settings again after updating).
+3. Create your recovery using OpenCorePkg.
 4. Download the EFI, extract it and make sure to pick "EFI" folder and not Sequoia/Sonoma when you copy it.
 5. Format your USB as FAT32, make sure that the EFI folder and recovery files is in the root of your USB.
-6. Install MacOS
+6. Install MacOS.
 7. Change RAM information (PI > Memory) and generate SMBIOS using [OCAT](https://github.com/ic005k/OCAuxiliaryTools).
 8. Mount your EFI using [MountEFI.command](https://github.com/corpnewt/MountEFI)
 9. Copy the EFI to your mounted EFI partition.
