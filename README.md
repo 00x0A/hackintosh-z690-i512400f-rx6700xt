@@ -1,6 +1,6 @@
 # OpenCore EFI for Z690-A Pro Wifi
 
-**Latest working macOS**: 15.0.0 (24A335)
+**Latest working macOS**: 15.1.1
 
 **SMBIOS**: iMacPro1,1 (MacPro7,1 works alebit less performant)
 
