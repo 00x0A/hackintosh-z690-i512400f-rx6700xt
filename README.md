@@ -4,7 +4,7 @@
 
 **SMBIOS**: iMacPro1,1 (MacPro7,1 works alebit less performant)
 
-**OpenCore**: 1.0.2 (Latest as of now)
+**OpenCore**: 1.0.2 MOD (Thanks to [Rursache](https://github.com/rursache))
 
 > [!WARNING]
 > You do this on your own risk, I will not be responsible for what happens to your machine if you don't follow proper instructions (i.e getting banned because you don't change SMBIOS info). Troubleshooting can be done if you supply proper information and ways to reproduce the issues and submit it as an issue on this repo.
@@ -16,12 +16,12 @@
 
 ## Get it running
 
-1. Download BIOS version 7D25v1H (Latest works but will make your PC loud)
-2. Disable CfgLock, Secure Boot, VT-D in BIOS
-3. Create your recovery using OpenCorePkg
+1. Download BIOS version 7D25v1H (Latest works but will make your PC loud).
+2. Disable CfgLock, Secure Boot, VT-D in BIOS (Enable XMP and your OC/BIOS settings again after updating).
+3. Create your recovery using OpenCorePkg.
 4. Download the EFI, extract it and make sure to pick "EFI" folder and not Sequoia/Sonoma when you copy it.
 5. Format your USB as FAT32, make sure that the EFI folder and recovery files is in the root of your USB.
-6. Install MacOS
+6. Install MacOS.
 7. Change RAM information (PI > Memory) and generate SMBIOS using [OCAT](https://github.com/ic005k/OCAuxiliaryTools).
 8. Mount your EFI using [MountEFI.command](https://github.com/corpnewt/MountEFI)
 9. Copy the EFI to your mounted EFI partition.
