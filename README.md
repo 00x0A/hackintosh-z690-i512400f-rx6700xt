@@ -1,19 +1,18 @@
 # OpenCore EFI for Z690-A Pro Wifi
 
-EFI for OpenCore based on Z690-A Pro Wifi, i5-12400F CPU and RX 6700 XT GPU.
+**Latest working macOS**: 15.0.0 (24A335)
+
+**SMBIOS**: iMacPro1,1 (MacPro7,1 works alebit less performant)
+
+**OpenCore**: 1.0.2 (Latest as of now)
+
+> [!WARNING]
+> You do this on your own risk, I will not be responsible for what happens to your machine if you don't follow proper instructions (i.e getting banned because you don't change SMBIOS info). Troubleshooting can be done if you supply proper information and ways to reproduce the issues and submit it as an issue on this repo.
 <p align="center">
   <img width="auto" height="500px" src="https://github.com/user-attachments/assets/5534e279-92a0-4bf9-95d0-87d7b73a319b">
 </p>
 
-# Disclaimer
-
-You do this on your own risk, I will not be responsible for what happens to your machine if you don't follow proper instructions (i.e getting banned because you don't change SMBIOS info). Troubleshooting can be done if you supply proper information and ways to reproduce the issues and submit it as an issue on this repo.
 ---
-### Information 
-
-- MacOS: [Sequoia](https://www.apple.com/macos/macos-sequoia/)
-- Bootloader: (OpenCore 1.0.2)[https://github.com/acidanthera/OpenCorePkg]
-- SMBIOS: iMacPro1,1 (MacPro7,1 works but with less performance)
 
 ## Get it running
 
@@ -28,8 +27,17 @@ You do this on your own risk, I will not be responsible for what happens to your
 9. Copy the EFI to your mounted EFI partition.
 10. Turn ShowPicker to False (if you don't want a picker at start-up) in [OCAT](https://github.com/ic005k/OCAuxiliaryTools).
 11. Troubleshoot for any issues (shouldn't be any but just in case).
+> [!NOTE]
+> Enable HiDPI Display settings by running `sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true` and rebooting the PC
 
-(Enable HiDPI Display settings by running sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true and rebooting the PC)
+Some useful [tips and tricks](https://github.com/5T33Z0/OC-Little-Translated/tree/main/A_Config_Tips_and_Tricks) and the full [OpenCore Documentation](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
+
+## Portmapping
+I've done the mapping for Z690-A Pro Wifi using [USBToolBox](https://github.com/USBToolBox/tool), you can make your own if an USB port does not work.
+
+## Todos
+- [ ] Check whether or not dualbooting Windows through OpenCore works
+- [ ] Smaller GPU hiccups on Sequoia needs to be fixed or addressed
 
 ## Kexts Used (for maintanence)
 
@@ -39,6 +47,7 @@ You do this on your own risk, I will not be responsible for what happens to your
 - AppleALC
 - SMCSuperIO/SMCProcessor
 - CpuTopologyRebuild
+- CpuTscSync
 - ForgedInvariant
 - RestrictEvents
 - AppleIGC
@@ -57,10 +66,11 @@ You do this on your own risk, I will not be responsible for what happens to your
 | Wifi      | 🚫 (Sequoia, works on Sonoma) |
 | Bluetooth | 🚫 (Sequoia, works on Sonoma) |
 | Ethernet  | ✅ |
+| iGPU      | (Not tested) |
 | dGPU      | ✅ |
 | NVME      | ✅ |
 | DRM       | 🚫 |
-| Wakeup/Restart/Power Off| ✅ |
+| ACPI      | ✅ |
 
 ### Hardware
 
@@ -76,6 +86,6 @@ You do this on your own risk, I will not be responsible for what happens to your
 | Lan / Ethernet| Intel® I225-V            |                                                                                                                                              |
 
 ## Credits
-OpenCore Team for OpenCore
-Kext Maintainers for driver functionalities
-Rursache for proper documentation standards
+- OpenCore Team for OpenCore
+- Kext Maintainers for driver functionalities
+- [Rursache](https://github.com/rursache) for proper documentation standards
