@@ -1,4 +1,4 @@
-# OpenCore Sequoia/Sonoma EFI for Z690-A Pro Wifi
+# OpenCore Config EFI for Z690-A Pro Wifi
 
 **Latest working macOS**: 15.1.1 (works on Sonoma as well).
 
