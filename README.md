@@ -19,7 +19,7 @@
 1. Download latest BIOS version.
 2. Disable CfgLock, Secure Boot, VT-D in BIOS (Check wakeup-event by bios then choose usb for usb wakeups).
 3. Create your recovery using OpenCorePkg.
-4. Download the EFI, extract it and make sure to pick the "EFI".
+4. Clone the repo, extract it and make sure to pick the "EFI".
 5. Format your USB as FAT32, make sure that the EFI folder and recovery files is in the root of your USB.
 6. Install MacOS.
 7. Change RAM information (PI > Memory) and generate SMBIOS using [OCAT](https://github.com/ic005k/OCAuxiliaryTools) on the USB.
