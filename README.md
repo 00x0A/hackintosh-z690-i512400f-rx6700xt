@@ -44,13 +44,10 @@ I've done the mapping for Z690-A Pro Wifi using [USBToolBox](https://github.com/
 ## Kexts Used (for maintanence)
 
 - Lilu
-- VirtualSMC
+- VirtualSMC/SMCSuperIO/SMCProcessor
 - NootRX
 - AppleALC
-- SMCSuperIO/SMCProcessor
-- CpuTopologyRebuild
-- CpuTscSync
-- ForgedInvariant
+- CPUFriend/CPUFriendFriend
 - RestrictEvents
 - AppleIGC
 - Itlwm/AirportItlwm
@@ -60,7 +57,6 @@ I've done the mapping for Z690-A Pro Wifi using [USBToolBox](https://github.com/
 - NVMEFix
 - USBToolBox
 - UTBMap
-- HibernationFixup
 
 ### Functionality
 | Component    | Status |
